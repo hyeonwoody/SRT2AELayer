@@ -15,7 +15,7 @@ function initialize(){
     text = new File("/"); //path to the .srt file
     text.open('r');
     
-    lineNumber =69; //Total subtitle Number
+    lineNumber =3; //Total subtitle Number
     
     
 }
@@ -34,6 +34,7 @@ function readTextFile(){
         number[i] = text.readln();
         
         time=text.readln();
+        time=time.replace(',','').replace(',','');
         tmp=time.substring(0,12).split(":");
         startTime[i] = (parseInt(tmp[0], 10) *60*60) + (parseInt(tmp[1],10) *60)+(parseInt(tmp[2],10)*0.001);
         
@@ -49,20 +50,20 @@ function readTextFile(){
     $.writeln("time : "+startTime[i]+" --> "+endTime[i]);
     $.writeln("commnet : "+comment[i]);
     if (comment[i] [0]!= "!" && comment[i] [0]!= "@" && comment[i] [0]!= "#"){  i++;}
-      //if (comment[i][0]== "#")  { comment[i]=comment[i].slice(1);i++;}
+      //special subtitle Area
       }
 }                                                      
 
 function basic(){
-    
-   var i=0;
-   var textProp;
-var textDocument;   
-    
+
+    var i=0;
+    var textProp;
+    var textDocument;   
+
     var normal=1;
     var impact =0;
-   if (normal ==1){
-       while (i<lineNumber){
+    if (normal ==1){
+        while (i<lineNumber){
             newLayer = comp.layers.addText(comment[i]);
             newLayer.position.setValue([959.893,952]);
             
@@ -75,7 +76,7 @@ var textDocument;
             textDocument.applyFill = true;
             textDocument.justification = ParagraphJustification.CENTER_JUSTIFY;
             textProp.setValue(textDocument);
-           
+            
             newLayer.inPoint = startTime[i];
             newLayer.outPoint = endTime[i];
             
@@ -104,9 +105,7 @@ var textDocument;
            
             newLayer.inPoint = startTime[i];
             newLayer.outPoint = endTime[i];
-            
             i++;
-        
         }
     }
 }
