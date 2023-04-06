@@ -4,8 +4,8 @@
 </br>
 
 ## 🧑‍💻: Intro
- 영상 편집의 자막 작업은 단순 반복을 요구하는데, 
- 이를 Adobe ExtendScript을 활용한 자동화를 통 
+ 영상 편집의 자막 작업은 오랜 단순 반복을 요구하는데, 
+ 이를 Adobe ExtendScript을 활용한 자동화를 통해 
  작업 시간을 줄일 수 있습니다.
  </br>
  시현영상 : https://youtu.be/92HdPTarB2g
