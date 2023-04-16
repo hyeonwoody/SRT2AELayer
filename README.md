@@ -11,7 +11,6 @@
 </br>
 
 ## 🎥: Demonstration 
-- https://youtu.be/b9ZuxRFlpKc?t=500
 
 </br>
 
